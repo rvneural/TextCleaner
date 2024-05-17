@@ -1,4 +1,10 @@
-from . import *
+import _clean_stopwords
+import _emoji_cleaner
+import _html_cleaner
+import _punctuation_cleaner
+import _spaces_cleaner
+import _to_lower
+import _to_morpheme
 
 
 class TextCleaner:
@@ -26,13 +32,13 @@ class TextCleaner:
         self.stopwords = stop_words
         self.morpheme = morpheme
 
-        self.to_lower = to_lower_text
-        self.clean_emoji = clean_emoji
-        self.clean_punctuation = clean_punctuation
-        self.clean_html = clean_html
-        self.clean_space = clean_spaces
-        self.clean_stopwords = clean_stopwords
-        self.to_morpheme = text_to_morphems
+        self.to_lower = _to_lower
+        self.clean_emoji = _emoji_cleaner
+        self.clean_punctuation = _punctuation_cleaner
+        self.clean_html = _html_cleaner
+        self.clean_space = _spaces_cleaner
+        self.clean_stopwords = _clean_stopwords
+        self.to_morpheme = _to_morpheme
 
     def clean_text(self, text: str) -> str:
 

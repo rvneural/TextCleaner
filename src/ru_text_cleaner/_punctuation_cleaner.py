@@ -1,4 +1,4 @@
-from . import *
+import string
 
 
 def clean_punctuation(self, text: str) -> str:

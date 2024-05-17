@@ -1,4 +1,4 @@
-from . import *
+import re
 
 
 def clean_html(self, text: str) -> str:

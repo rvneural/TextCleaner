@@ -1,5 +1,4 @@
-from . import *
-
+import re
 
 def clean_spaces(self, text: str) -> str:
 

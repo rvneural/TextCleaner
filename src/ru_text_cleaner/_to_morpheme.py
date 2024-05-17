@@ -1,4 +1,4 @@
-from . import *
+import pymorphy2
 
 
 def text_to_morphems(self, text: str) -> str:

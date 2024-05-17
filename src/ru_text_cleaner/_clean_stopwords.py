@@ -1,4 +1,6 @@
-from . import *
+import nltk
+
+nltk.download('stopwords')
 
 
 def clean_stopwords(self, text: str) -> str:
