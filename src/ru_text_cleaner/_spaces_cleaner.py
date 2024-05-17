@@ -15,5 +15,8 @@ def clean_spaces(self, text: str) -> str:
             text - сама строка, в которой ищем множества пробелов
     """
 
+    text = re.sub(r'[\uFE00-\uFE0F]', ' ', text)
+    text = re.sub('[\t\r\n]', ' ', text)
     text = re.sub(r' +', ' ', text)
-    return text.strip()
+    text = re.sub(r'\xa0+', ' ', text)
+    return text
