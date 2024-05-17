@@ -2,6 +2,8 @@
 
 ## Библиотека подготовки русского текста для решения NLP- и иных задач
 
+Установка: `pip install ru-text-cleaner`
+
 Основным форматом использования билиотеки является:
 ```Python
 from ru_text_cleaner import TextCleaner
