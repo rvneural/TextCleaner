@@ -1,4 +1,4 @@
-from src.ru_text_cleaner import *
+from . import *
 
 
 def text_to_morphems(self, text: str) -> str:

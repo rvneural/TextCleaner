@@ -1,4 +1,4 @@
-from src.ru_text_cleaner import *
+from . import *
 
 
 def clean_html(self, text: str) -> str:
