@@ -54,3 +54,28 @@ class TextCleaner:
             text = self.clean_space(self, text)
 
         return text
+
+    def clean_texts(self, texts: []) -> []:
+
+        clean_texts = []
+
+        """ Метод clean_texts форматирует массив в зависимости от поставленных флагов"""
+
+        for text in texts:
+            if self.lower:
+                text = self.to_lower(self, text)
+            if self.emoji:
+                text = self.clean_emoji(self, text)
+            if self.html:
+                text = self.clean_html(self, text)
+            if self.punctuation:
+                text = self.clean_punctuation(self, text)
+            if self.stopwords:
+                text = self.clean_stopwords(self, text)
+            if self.morpheme:
+                text = self.to_morpheme(self, text)
+            if self.spaces:
+                text = self.clean_space(self, text)
+            clean_texts.append(text)
+
+        return clean_texts
