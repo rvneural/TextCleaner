@@ -1,4 +1,4 @@
-from src.TextCleaner import *
+from src.ru_text_cleaner import *
 
 
 def clean_punctuation(self, text: str) -> str:

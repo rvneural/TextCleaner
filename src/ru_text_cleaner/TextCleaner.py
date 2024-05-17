@@ -1,4 +1,4 @@
-from src.TextCleaner import *
+from src.ru_text_cleaner import *
 
 
 class TextCleaner:

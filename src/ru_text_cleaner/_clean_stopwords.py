@@ -1,4 +1,4 @@
-from src.TextCleaner import *
+from src.ru_text_cleaner import *
 
 
 def clean_stopwords(self, text: str) -> str:
