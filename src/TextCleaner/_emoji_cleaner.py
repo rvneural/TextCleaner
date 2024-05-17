@@ -1,4 +1,4 @@
-from TextCleaner import *
+from src.TextCleaner import *
 
 
 def clean_emoji(self, text: str) -> str:

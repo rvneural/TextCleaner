@@ -1,4 +1,4 @@
-from TextCleaner import *
+from src.TextCleaner import *
 
 
 class TextCleaner:

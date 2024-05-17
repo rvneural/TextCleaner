@@ -1,4 +1,4 @@
-from TextCleaner import *
+from src.TextCleaner import *
 
 
 def text_to_morphems(self, text: str) -> str:
