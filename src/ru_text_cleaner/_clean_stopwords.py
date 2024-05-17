@@ -1,6 +1,6 @@
 import nltk
-
 nltk.download('stopwords')
+from nltk.corpus import stopwords
 
 
 def clean_stopwords(self, text: str) -> str:
