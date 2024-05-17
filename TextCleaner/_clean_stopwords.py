@@ -1,8 +1,8 @@
 from TextCleaner import *
 
 
-def clean_stopwords(self, text: str, language: str) -> str:
-    stop_words = set(stopwords.words(language))
+def clean_stopwords(self, text: str) -> str:
+    stop_words = set(stopwords.words('russian'))
     words = text.split(' ')
     answer = ''
     for word in words:
