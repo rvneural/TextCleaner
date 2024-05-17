@@ -4,6 +4,20 @@ from src.ru_text_cleaner import *
 class TextCleaner:
     def __init__(self, spaces=True, punctuation=True, html=True, emoji=True, lower=True,
                  stop_words=True, morpheme=True):
+
+        """
+        Метод __init__ инциализирует экземпляр класса TextCleaner
+
+        self.spaces = spaces - Необходимо ли удалять пробелы
+        self.punctuation = punctuation - Необходимо ли удалять пунктуацию
+        self.html = html - Необходимо ли удалять теги HTML
+        self.emoji = emoji - Необходимо ли удалять Emoji
+        self.lower = lower - Необходимо ли переводить текст в нижний регистр
+        self.stopwords = stop_words - Необходимо ли удалять стоп слова
+        self.morpheme = morpheme - Необходимо ли заменять слова на морфемы
+
+        """
+
         self.spaces = spaces
         self.punctuation = punctuation
         self.html = html
@@ -21,6 +35,9 @@ class TextCleaner:
         self.to_morpheme = text_to_morphems
 
     def clean_text(self, text: str) -> str:
+
+        """ Метод clean_text форматирует текст в зависимости от поставленных флагов"""
+
         if self.lower:
             text = self.to_lower(self, text)
         if self.emoji:
