@@ -93,11 +93,11 @@ class TextCleaner:
         return clean_texts
 
     def to_vector(self, text: tensorflow.string) -> []:
-        return self.clean_text(text.numpy().decode()).split()
+        return tensorflow.strings.split(self.clean_text(text))
 
     def to_vectors(self, text: []) -> []:
         clean_texts = self.clean_texts(text)
         answer = []
         for t in clean_texts:
-            answer.append(t)
+            answer.append(tensorflow.strings.split(t))
         return answer
