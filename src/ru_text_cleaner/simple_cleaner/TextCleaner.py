@@ -1,4 +1,10 @@
-from . import *
+from ._html_cleaner import clean_html
+from ._spaces_cleaner import clean_spaces
+from ._to_morpheme import text_to_morphems
+from ._to_lower import to_lower_text
+from ._emoji_cleaner import clean_emoji
+from ._clean_stopwords import clean_stopwords
+from ._punctuation_cleaner import clean_punctuation
 
 
 class TextCleaner:
@@ -39,19 +45,19 @@ class TextCleaner:
         """ Метод clean_text форматирует текст в зависимости от поставленных флагов"""
 
         if self.lower:
-            text = self.to_lower(self, text)
+            text = self.to_lower(text)
         if self.emoji:
-            text = self.clean_emoji(self, text)
+            text = self.clean_emoji(text)
         if self.html:
-            text = self.clean_html(self, text)
+            text = self.clean_html(text)
         if self.punctuation:
-            text = self.clean_punctuation(self, text)
+            text = self.clean_punctuation(text)
         if self.stopwords:
-            text = self.clean_stopwords(self, text)
+            text = self.clean_stopwords(text)
         if self.morpheme:
-            text = self.to_morpheme(self, text)
+            text = self.to_morpheme(text)
         if self.spaces:
-            text = self.clean_space(self, text)
+            text = self.clean_space(text)
 
         return text
 
@@ -63,19 +69,29 @@ class TextCleaner:
 
         for text in texts:
             if self.lower:
-                text = self.to_lower(self, text)
+                text = self.to_lower(text)
             if self.emoji:
-                text = self.clean_emoji(self, text)
+                text = self.clean_emoji(text)
             if self.html:
-                text = self.clean_html(self, text)
+                text = self.clean_html(text)
             if self.punctuation:
-                text = self.clean_punctuation(self, text)
+                text = self.clean_punctuation(text)
             if self.stopwords:
-                text = self.clean_stopwords(self, text)
+                text = self.clean_stopwords(text)
             if self.morpheme:
-                text = self.to_morpheme(self, text)
+                text = self.to_morpheme(text)
             if self.spaces:
-                text = self.clean_space(self, text)
+                text = self.clean_space(text)
             clean_texts.append(text)
 
         return clean_texts
+
+    def to_vector(self, text: str) -> []:
+        return self.clean_text(text).split()
+
+    def to_vectors(self, text: []) -> []:
+        clean_texts = self.clean_texts(text)
+        answer = []
+        for t in clean_texts:
+            answer.append(t.split())
+        return answer

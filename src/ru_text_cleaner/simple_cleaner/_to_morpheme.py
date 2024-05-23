@@ -1,7 +1,7 @@
 import pymorphy2
 
 
-def text_to_morphems(self, text: str) -> str:
+def text_to_morphems(text: str) -> str:
 
     """
     Метод text_to_morphems заменяет слова на морфемы

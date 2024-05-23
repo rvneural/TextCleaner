@@ -1,4 +1,4 @@
-def to_lower_text(self, text: str) -> str:
+def to_lower_text(text: str) -> str:
 
     """
     Метод to_lower_text меняет все заглавные символы в тексте на прописные

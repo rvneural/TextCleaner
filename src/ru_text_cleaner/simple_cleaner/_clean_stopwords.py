@@ -3,7 +3,7 @@ nltk.download('stopwords')
 from nltk.corpus import stopwords
 
 
-def clean_stopwords(self, text: str) -> str:
+def clean_stopwords(text: str) -> str:
 
     """
     Метод clean_stopwords убирает все стоп слова

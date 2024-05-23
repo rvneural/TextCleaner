@@ -1,6 +1,6 @@
 import re
 
-def clean_spaces(self, text: str) -> str:
+def clean_spaces(text: str) -> str:
 
     """
     Метод clean_spaces убирает лишние пробелы из текста
