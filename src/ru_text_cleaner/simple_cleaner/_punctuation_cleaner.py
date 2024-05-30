@@ -1,4 +1,5 @@
 import string
+import re
 
 
 def clean_punctuation(text: str) -> str:
@@ -7,10 +8,13 @@ def clean_punctuation(text: str) -> str:
 
     return ''.join(i for i in text if i not in string.punctuation) - возвращает текст без пунктуационных знаков 
     """
-    text = text.replace('-', ' ')
-    text = text.replace('–', ' ')
-    text = text.replace('—', ' ')
-    text = text.replace('«', ' ')
-    text = text.replace('»', ' ')
+
+    text = re.sub('-', ' ', text)
+    text = re.sub('–', ' ', text)
+    text = re.sub('—', ' ', text)
+    text = re.sub('«', ' ', text)
+    text = re.sub('»', ' ', text)
+    text = re.sub(' ', ' ', text)
+
     return ''.join(i for i in text if i not in string.punctuation)
 
